@@ -84,6 +84,7 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 ## Ingesting Data into the SDI
 > **Note**
 > Let participants upload data to the data lake. 
+
 > **Warning**
 > We ingest these data in the SDI and let them connect to it ?
 
