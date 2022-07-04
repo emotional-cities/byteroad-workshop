@@ -1,6 +1,11 @@
 ![logo](BR_Black.jpg)
 # WORKSHOP - Sharing data with the eMOTIONAL Cities SDI :open_hands:
-The purpose of workshop is to learn how-to use the eMOTIONAL Cities Spatial Data Infrastructure (SDI). Please read the [FAQ](#faq) section for more information.
+This workshop introduces the tools that compose the
+eMOTIONAL Cities GIS infrastructure. We will see how to share and
+consume data through the classic W * OGC services and the latest OGC
+Open API. During the workshop, we will see how to use client
+applications, such as QGIS, to consume data from various endpoints.
+Please read the [FAQ](#faq) section for more information.
 This workshop was created by [ByteRoad](https://byteroad.net/), in the context of the [eMOTIONAL Cities](https://emotionalcities-h2020.eu/) project.
 
 ## Architecture and Technology Stack :desktop_computer:
