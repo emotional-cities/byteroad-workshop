@@ -1,6 +1,7 @@
 ![logo](BR_Black.jpg)
 # WORKSHOP - Sharing data with eMOTIONAL Cities SDI
-The purpose of workshop is to learn how-to use the eMOTIONAL Cities Spatial Data Infrastructure (SDI). Please read the [FAQ](#FAQ) section.
+The purpose of workshop is to learn how-to use the eMOTIONAL Cities Spatial Data Infrastructure (SDI). Please read the [FAQ](#FAQ) section for more information.
+This workshop was created by [ByteRoad](https://byteroad.net/), in the context of the [eMOTIONAL Cities](https://emotionalcities-h2020.eu/) project.
 
 ## Architecture and Technology Stack
 The SDI uses an hybrid architecture, with a mix of [legacy](#the-legacy-stack) and [newer](#the-modern-stack) OGC standards. On one hand we will leverage the OGC API family of standards, which are web native and present a number of advantages for modern web applications. On the other hand, we aknoweledge the fact that a certain degree of compatibility with legacy OGC Web Services (OWS) may be required for some use cases, and will publish data also using those standards.
