@@ -11,9 +11,11 @@ These are the standards that we identified as relevant for publishing the eMOTIO
 - OGC API Records - for exposing a catalogue of geospatial metadata;
 - OGC API DGGS - for serving data organised according to a Discrete Global Grid System (for instance, indexes);
 
+> **Note**
+> Add hyperlinks to the standards above
+
 ### The Legacy Stack
 The legacy stack rests on the solid foundation of GeoServer, which allows geospatial datasets to be exposed in the following standards:
-
 - WFS 1.0.0, 1.1.0, 2.0.0
 - WMS 1.1.1, 1.3.0
 - WMS-C 1.1.1
@@ -48,7 +50,7 @@ Browse the catalogue using this client:
 https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
 
 ## Connecting to the SDI using a Client
-Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it supports for any of these standards.
+Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
 
 ### QGIS
 OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
@@ -72,6 +74,10 @@ TODO: let participants upload data to the data lake. We ingest these data in the
 
 ## FAQ
 
+**Q: How can I register for the workshop?**
+
+**A:** Please register using [this](https://docs.google.com/forms/d/e/1FAIpQLSffKGPfxnrFIAVHXUDnkUDzrWAn7a-YNTHgkWuwVnGTCWbQ6Q/viewform) link.
+
 **Q: Do I need to install anything ahead of the workshop?**
 
 **A:** Yes. If you want to be *hands-on*, please install (*at least, some of*) this software:
@@ -85,7 +91,7 @@ TODO: let participants upload data to the data lake. We ingest these data in the
 
 **Q: Do I need to know how-to code, in order to attend this workshop?**
 
-**A:** No. Although some of the client applications which interface with the SDI use some coding, we will also show no-coding alternatives.
+**A:** No. Although some of the client applications which interface with the SDI use some coding, we will also show *no-coding* alternatives.
 
 **Q: What will I learn during this workshop?**
 
