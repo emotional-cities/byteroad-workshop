@@ -1,9 +1,9 @@
 ![logo](BR_Black.jpg)
-# WORKSHOP - Sharing data with eMOTIONAL Cities SDI :open_hands:
+# WORKSHOP - Sharing data with the eMOTIONAL Cities SDI :open_hands:
 The purpose of workshop is to learn how-to use the eMOTIONAL Cities Spatial Data Infrastructure (SDI). Please read the [FAQ](#faq) section for more information.
 This workshop was created by [ByteRoad](https://byteroad.net/), in the context of the [eMOTIONAL Cities](https://emotionalcities-h2020.eu/) project.
 
-## Architecture and Technology Stack
+## Architecture and Technology Stack :desktop_computer:
 The SDI uses an hybrid architecture, with a mix of [legacy](#the-legacy-stack) and [newer](#the-modern-stack) OGC standards. On one hand we will leverage the OGC API family of standards, which are web native and present a number of advantages for modern web applications. On the other hand, we aknoweledge the fact that a certain degree of compatibility with legacy OGC Web Services (OWS) may be required for some use cases, and will publish data also using those standards.
 
 ### The Modern Stack
@@ -26,7 +26,7 @@ The legacy stack rests on the solid foundation of GeoServer, which allows geospa
 > **Note**
 > Add hyperlinks to the standards above
 
-## Where is the SDI?
+## Where is the SDI? :eyes:
 You can access the ```newer``` SDI at this endpoint:
 
 https://emotional.byteroad.net/
@@ -60,7 +60,7 @@ https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
 > **Note**
 > Enable GitHub pages for this endpoint and replace the link.
 
-## Connecting to the SDI using a Client
+## Connecting to the SDI using a Client :electric_plug:
 Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
 
 ### QGIS
@@ -79,11 +79,11 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 > **Note**
 > OGC API Features, OGC API Vector Tiles
 
-## Authoring Metadata
+## Authoring Metadata :open_book:
 > **Warning**
 > Use QGIS & PygeoMeta?
 
-## Ingesting Data into the SDI
+## Ingesting Data into the SDI :rocket:
 > **Note**
 > Let participants upload data to the data lake. 
 
