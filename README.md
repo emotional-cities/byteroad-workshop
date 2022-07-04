@@ -48,6 +48,9 @@ These are the endpoints for the different services:
 - [WMTS 1.0.0](http://localhost/geoserver/gwc/service/wmts?REQUEST=GetCapabilities)
 - [WFS 2.0.0](http://localhost/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities)
 
+> **Note**
+> Add missing datasets to the legacy SDI.
+
 Browse the catalogue using this client:
 
 https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
@@ -59,22 +62,30 @@ https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
 Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
 
 ### QGIS
-OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
+> **Note**
+> OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
 
 ### Mapstore
-OGC WFS, WMTS & WMTS.
+> **Note**
+> OGC WFS, WMTS & WMTS.
 
 ### Python
-OGC API Features, OGC API Records, OGC WFS, WMTS & WMTS.
+> **Note**
+> OGC API Features, OGC API Records, OGC WFS, WMTS & WMTS.
 
 ### JavaScript
-OGC API Features, OGC API Vector Tiles
+> **Note**
+> OGC API Features, OGC API Vector Tiles
 
 ## Authoring Metadata
-TODO: use QGIS & PygeoMeta?
+> **Warning**
+> Use QGIS & PygeoMeta?
 
 ## Ingesting Data into the SDI
-TODO: let participants upload data to the data lake. We ingest these data in the SDI and let them connect to it (?).
+> **Note**
+> Let participants upload data to the data lake. 
+> **Warning**
+> We ingest these data in the SDI and let them connect to it ?
 
 ## Authoring Metadata
 
