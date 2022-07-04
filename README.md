@@ -90,6 +90,9 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 > Use QGIS & PygeoMeta?
 
 ## Ingesting Data into the SDI :rocket:
+
+Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions.
+
 > **Note**
 > Let participants upload data to the data lake. 
 
