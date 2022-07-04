@@ -1,3 +1,4 @@
+![logo](BR_Black.jpg)
 # WORKSHOP - Sharing data with eMOTIONAL Cities SDI
 The purpose of workshop is to learn how-to use the eMOTIONAL Cities Spatial Data Infrastructure (SDI). Please read the [FAQ](#FAQ) section.
 
