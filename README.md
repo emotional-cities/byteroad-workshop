@@ -21,6 +21,9 @@ The legacy stack rests on the solid foundation of GeoServer, which allows geospa
 - WMS-C 1.1.1
 - WMTS 1.0.0
 
+> **Note**
+> Add hyperlinks to the standards above
+
 ## Where is the SDI?
 You can access the ```newer``` SDI at this endpoint:
 
@@ -48,6 +51,9 @@ These are the endpoints for the different services:
 Browse the catalogue using this client:
 
 https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
+
+> **Note**
+> Enable GitHub pages for this endpoint and replace the link.
 
 ## Connecting to the SDI using a Client
 Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
