@@ -90,7 +90,7 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 > **Warning**
 > We ingest these data in the SDI and let them connect to it ?
 
-## FAQ
+## FAQ :question:
 
 **Q: How can I register for the workshop?**
 
