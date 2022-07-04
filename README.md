@@ -1,5 +1,5 @@
 ![logo](BR_Black.jpg)
-# WORKSHOP - Sharing data with eMOTIONAL Cities SDI
+# WORKSHOP - Sharing data with eMOTIONAL Cities SDI :open_hands:
 The purpose of workshop is to learn how-to use the eMOTIONAL Cities Spatial Data Infrastructure (SDI). Please read the [FAQ](#faq) section for more information.
 This workshop was created by [ByteRoad](https://byteroad.net/), in the context of the [eMOTIONAL Cities](https://emotionalcities-h2020.eu/) project.
 
