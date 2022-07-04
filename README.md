@@ -94,7 +94,7 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions.
 
 > **Note**
-> Let participants upload data to the data lake. 
+> Let participants upload data & metadata to the data lake. We need to be strict regarding data formats.
 
 > **Warning**
 > We ingest these data in the SDI and let them connect to it ?
