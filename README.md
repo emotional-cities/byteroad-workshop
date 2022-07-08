@@ -47,17 +47,15 @@ You can click in any collection, to learn about the available services and acces
 
 You can access the ```legacy``` SDI at this endpoint:
 
-https://oldskool.byteroad.net/geoserver/
+https://emotional.byteroad.net/geoserver/
 
 The UI is protected with username and password, so ask for the credentials first.
 
 These are the endpoints for the different services:
-- [WMS 1.3.0](http://localhost/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities)
-- [WMTS 1.0.0](http://localhost/geoserver/gwc/service/wmts?REQUEST=GetCapabilities)
-- [WFS 2.0.0](http://localhost/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities)
+- [WMS 1.3.0](https://emotional.byteroad.net/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities)
+- [WMTS 1.0.0](https://emotional.byteroad.net/geoserver/gwc/service/wmts?REQUEST=GetCapabilities)
+- [WFS 2.0.0](https://emotional.byteroad.net/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities)
 
-> **Note**
-> Add missing datasets to the legacy SDI.
 
 Browse the catalogue using this client:
 
