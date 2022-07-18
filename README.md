@@ -89,13 +89,9 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 
 ## Ingesting Data into the SDI :rocket:
 
-Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions.
+Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON``` format.
 
-> **Note**
-> Let participants upload data & metadata to the data lake. We need to be strict regarding data formats.
-
-> **Warning**
-> We ingest these data in the SDI and let them connect to it ?
+We are going to ingest the dataset into the SDI, and you can access it using one of the clients you saw in the previous section.
 
 ## FAQ
 
