@@ -93,6 +93,9 @@ Upload your own dataset, using [these](https://github.com/emotional-cities/data-
 
 We are going to ingest the dataset into the SDI, and you can access it using one of the clients you saw in the previous section.
 
+> **Note**
+> Configure geoserver to [read data from an S3 bucket](https://github.com/emotional-cities/byteroad-workshop/issues/2)
+
 ## FAQ
 
 **Q: How can I register for the workshop?**
