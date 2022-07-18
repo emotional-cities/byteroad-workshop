@@ -105,9 +105,9 @@ We are going to ingest the dataset into the SDI, and you can access it using one
 **Q: Do I need to install anything ahead of the workshop?**
 
 **A:** Yes. If you want to be *hands-on*, please install (*at least, some of*) this software:
-- QGIS
-- Jupyter
-- Visual Studio Code or another text editor
+- [QGIS](https://github.com/doublebyte1/bts_geospatial/blob/master/INSTALL_QGIS.md)
+- [Jupyter](https://jupyter.org/install#jupyter-notebook)
+- [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) or another text editor
 
 > **Note**
 > Provide installation instructions.
