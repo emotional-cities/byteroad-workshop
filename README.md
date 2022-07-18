@@ -109,9 +109,6 @@ We are going to ingest the dataset into the SDI, and you can access it using one
 - [Jupyter](https://jupyter.org/install#jupyter-notebook)
 - [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) or another text editor
 
-> **Note**
-> Provide installation instructions.
-
 **Q: Is this workshop for me?**
 
 **A:** If you produce/collect or access any data from the eMOTIONAL Cities project, this workshop is for you.
