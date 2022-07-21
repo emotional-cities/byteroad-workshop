@@ -26,12 +26,11 @@ For *geospatial data*, the most popular formats are:
 The most widely used open standards for *services* are those defined by the Open Geospatial Consortium (OGC).
 The most commonly used standards to date are those of OGC Web Services (OWS).
 Still, in recent years new standards have emerged that are more adherent to modern technological trends, oriented to the web and ease of use, known under the name of OGC OpenAPI.
-Our SDI uses a hybrid architecture with a mix of OWS standards, which we will call ["Legacy"](#the-legacy-stack) and the latest OGC OpenAPI OGC, the ["Modern Stack"](#the-modern-stack).
+Our SDI uses a hybrid architecture with a mix of OWS standards, which we will call ["Legacy Stack"](#the-legacy-stack) and the latest OGC OpenAPI OGC, the ["Modern Stack"](#the-modern-stack).
 The idea is to create an SDI that is easy to use, aligned with emerging technological trends, and compatible with most existing tools.
 
 > **Note**
 > It is possible to use the Legacy or Modern stack services... or both, as long as it suits users who have to consume your data. However, from a harmonization point of view, the ideal would be to have uniformity between the different datasets.
-
 
 ### Data formats
 
@@ -44,35 +43,31 @@ From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data
 | 37          | 31.5 %    | 15:35:00 21/07/2022 |POINT (1016908.55777364 4680222.7018746)   |
 | 37          | 34 %      | 15:35:00 21/07/2022 |POINT (1016721.55777364 4680232.7018746)   |
 
-In GIS data, this association must be explicit, and the geographic information must travel 1:1 with the relevant information. This is quite straightforward in the data produced with GIS software such as QGIS. For data produced with other softwares this is not always true, and therefore an extra processing step is required before producing the dataset to be ingested into the SDI.
-
-
-### Data services
-
-
+In GIS data, this association must be explicit, and the geographic information must be associated 1:1 with the relevant feature. This is quite straightforward in the data produced with GIS software such as QGIS. For data produced with other softwares this is not always true, and therefore an extra processing step is required before producing the dataset to be ingested into the SDI.
 
 ### The Modern Stack
-These are the standards that we identified as relevant for publishing the eMOTIONAL Cities datasets:
-- OGC API Features - for serving feature data over the web;
-- OGC API Tiles - for serving vector tiles over the web;
-- OGC API Records - for exposing a catalogue of geospatial metadata;
-- OGC API DGGS - for serving data organised according to a Discrete Global Grid System (for instance, indexes);
 
-> **Note**
-> Add hyperlinks to the standards above
+![Modern Stack](img/modern_stack.png)
+
+These are the standards that we identified as relevant for publishing the eMOTIONAL Cities datasets:
+- [OGC API Features](https://www.ogc.org/standards/ogcapi-features) - for serving feature data over the web;
+- [OGC API Tiles](https://ogcapi.ogc.org/tiles/) - (draft) for serving vector tiles over the web;
+- [OGC API Records](https://ogcapi.ogc.org/records/) - (draft) for exposing a catalogue of geospatial metadata;
+- [OGC API DGGS](https://ogcapi.ogc.org/dggs/) - (draft) for serving data organised according to a Discrete Global Grid System (for instance, indexes);
 
 ### The Legacy Stack
-The legacy stack rests on the solid foundation of GeoServer, which allows geospatial datasets to be exposed in the following standards:
-- WFS 1.0.0, 1.1.0, 2.0.0
-- WMS 1.1.1, 1.3.0
-- WMS-C 1.1.1
-- WMTS 1.0.0
 
-> **Note**
-> Add hyperlinks to the standards above
+![Legacy Stack](img/legacy_stack.png)
+
+The legacy stack rests on the solid foundation of GeoServer, which allows geospatial datasets to be exposed in the following standards:
+- [WFS](https://www.ogc.org/standards/wfs) 1.0.0, 1.1.0, 2.0.0
+- [WMS](https://www.ogc.org/standards/wms) 1.1.1, 1.3.0
+- [WMS-C](https://www.ogc.org/standards/wms) 1.1.1
+- [WMTS](https://www.ogc.org/standards/wmts) 1.0.0
+
 
 ## Where is the SDI? :eyes:
-You can access the ```newer``` SDI at this endpoint:
+You can access the ```modern``` services at this endpoint:
 
 https://emotional.byteroad.net/
 
@@ -84,7 +79,11 @@ https://emotional.byteroad.net/collections?f=html
 
 You can click in any collection, to learn about the available services and access the data.
 
-You can access the ```legacy``` SDI at this endpoint:
+An alternative way to browse the catalogue using this client:
+
+https://luoghi-indomiti.github.io/a-gis-full-of-records/
+
+You can access the ```legacy``` services at this endpoint:
 
 https://emotional.byteroad.net/geoserver/
 
@@ -95,13 +94,6 @@ These are the endpoints for the different services:
 - [WMTS 1.0.0](https://emotional.byteroad.net/geoserver/gwc/service/wmts?REQUEST=GetCapabilities)
 - [WFS 2.0.0](https://emotional.byteroad.net/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities)
 
-
-Browse the catalogue using this client:
-
-https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
-
-> **Note**
-> Enable GitHub pages for this endpoint and replace the link.
 
 ## Connecting to the SDI using a Client :electric_plug:
 Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
