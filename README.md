@@ -1,4 +1,5 @@
 ![logo](BR_Black.jpg)
+
 # WORKSHOP - Sharing data with the eMOTIONAL Cities SDI :open_hands:
 This workshop introduces the tools that compose the
 eMOTIONAL Cities GIS infrastructure. We will see how to share and
@@ -10,7 +11,45 @@ Please read the [FAQ](#faq) section for more information.
 This workshop was created by [ByteRoad](https://byteroad.net/), in the context of the [eMOTIONAL Cities](https://emotionalcities-h2020.eu/) project.
 
 ## Architecture and Technology Stack :desktop_computer:
-The SDI uses an hybrid architecture, with a mix of [legacy](#the-legacy-stack) and [newer](#the-modern-stack) OGC standards. On one hand we will leverage the OGC API family of standards, which are web native and present a number of advantages for modern web applications. On the other hand, we aknoweledge the fact that a certain degree of compatibility with legacy OGC Web Services (OWS) may be required for some use cases, and will publish data also using those standards.
+An SDI is a set of tools and methodologies for storing and facilitating the use of geospatial data. The SDI of eMOTIONAL Cities favours using open source tools and open standards for data and service formats.
+
+When we talk about standards, it's helpful to distinguish between two different categories:
+Data: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
+Services: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
+
+For *geospatial data*, the most popular formats are:
+
+* Geographic database
+* Vector files
+* Raster files
+
+The most widely used open standards for *services* are those defined by the Open Geospatial Consortium (OGC).
+The most commonly used standards to date are those of OGC Web Services (OWS).
+Still, in recent years new standards have emerged that are more adherent to modern technological trends, oriented to the web and ease of use, known under the name of OGC OpenAPI.
+Our SDI uses a hybrid architecture with a mix of OWS standards, which we will call ["Legacy"](#the-legacy-stack) and the latest OGC OpenAPI OGC, the ["Modern Stack"](#the-modern-stack).
+The idea is to create an SDI that is easy to use, aligned with emerging technological trends, and compatible with most existing tools.
+
+> **Note**
+> It is possible to use the Legacy or Modern stack services... or both, as long as it suits users who have to consume your data. However, from a harmonization point of view, the ideal would be to have uniformity between the different datasets.
+
+
+### Data formats
+
+From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data format is the first aspect we need to consider. Geospatial data is significantly associated with a location on the Earth's surface. An example:
+
+| Temperature | Humidity  | Time                | Geometry                                  |
+|-------------|-----------|---------------------|-------------------------------------------|
+| 37.5        | 30 %      | 15:30:00 21/07/2022 |POINT (1016908.55777364 4680222.7018746)   |
+| 37          | 35 %      | 15:30:00 21/07/2022 |POINT (1016721.55777364 4680232.7018746)   |
+| 37          | 31.5 %    | 15:35:00 21/07/2022 |POINT (1016908.55777364 4680222.7018746)   |
+| 37          | 34 %      | 15:35:00 21/07/2022 |POINT (1016721.55777364 4680232.7018746)   |
+
+In GIS data, this association must be explicit, and the geographic information must travel 1:1 with the relevant information. This is quite straightforward in the data produced with GIS software such as QGIS. For data produced with other softwares this is not always true, and therefore an extra processing step is required before producing the dataset to be ingested into the SDI.
+
+
+### Data services
+
+
 
 ### The Modern Stack
 These are the standards that we identified as relevant for publishing the eMOTIONAL Cities datasets:
@@ -78,10 +117,6 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 ### Python
 > **Note**
 > OGC API Features, OGC API Records, OGC WFS, WMTS & WMTS.
-
-### JavaScript
-> **Note**
-> OGC API Features, OGC API Vector Tiles
 
 ## Authoring Metadata :open_book:
 > **Warning**
