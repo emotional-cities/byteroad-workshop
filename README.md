@@ -15,8 +15,8 @@ An SDI is a set of tools and methodologies for storing and facilitating the use 
 
 When we talk about standards, it's helpful to distinguish between two different categories:
 
-* **Data**: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
-* **Services**: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
+* **Data formats**: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
+* **Service standards**: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
 
 For *geospatial data*, the most popular formats are:
 
@@ -100,12 +100,17 @@ These are the endpoints for the different services:
 Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
 
 ### QGIS
+
+[QGIS](https://www.qgis.org/en/site/) could be considered one of the eMOTIONAL Cities SDI tools, with the only difference that it must be installed locally, on your machine.
+
+QGIS is a desktop software to edit GIS data. It's the main open source solution in the category and is compatible with most of the data formats and standards available, and is continuously updated to support new standards.
+
 > **Note**
 > OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
 
 ### Mapstore
 
-Mapstore is a component of our SDI and offers some interesting [Web mapping](https://en.wikipedia.org/wiki/Web_mapping) capabilities for the legacy stack. In fact, it is possible to use Mapstore to view the data stored in GeoServer.
+[Mapstore](https://mapstore.readthedocs.io/en/latest/) is a component of our SDI and offers some interesting [Web mapping](https://en.wikipedia.org/wiki/Web_mapping) capabilities for the legacy stack. In fact, it is possible to use Mapstore to view the data stored in GeoServer.
 
 To access Mapstore you can go [here](https://emotional.byteroad.net/mapstore/#/) and log in with credentials:
 
