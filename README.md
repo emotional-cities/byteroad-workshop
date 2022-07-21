@@ -103,8 +103,48 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 > OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
 
 ### Mapstore
-> **Note**
-> OGC WFS, WMTS & WMTS.
+
+Mapstore is a component of our SDI and offers some interesting [Web mapping](https://en.wikipedia.org/wiki/Web_mapping) capabilities for the legacy stack. In fact, it is possible to use Mapstore to view the data stored in GeoServer.
+
+To access Mapstore you can go [here](https://emotional.byteroad.net/mapstore/#/) and log in with credentials
+
+> **Workshop Credentials**
+> User: *workshop*
+> Password: *WSTartu22!*
+
+![Mapstore Login](img/mapstore1.png)
+
+To create a new map, click on this button:
+
+![Mapstore New Map](img/mapstore2.png)
+
+The new map will be empty, so we need to configure our Geoserver WMS enpoint to pick some layers to load (or WFS and WMTS if you prefer).
+
+![Mapstore Menu](img/mapstore3.png)
+
+The eMOTIONAL Cities Geoserver WMS endpoint is *https://emotional.byteroad.net/geoserver/wms*
+
+![Mapstore Catalog Configuration](img/mapstore4.png)
+
+After save we will be able to load our layers
+
+![Mapstore Catalog Layers](img/mapstore5.png)
+
+And add them to the map
+
+![Mapstore Map with layers](img/mapstore6.png)
+
+We can add many layer as we need. There are [many options](https://mapstore.readthedocs.io/en/latest/user-guide/layer-settings/) to play with.
+
+To persist our map we can save it from the top right menu
+
+![Mapstore Menu](img/mapstore3.png)
+
+Then we can choose the name and description of the map and who has access to it
+
+![Mapstore Menu](img/mapstore7.png)
+
+The official documentation of Mapstore is available [here](https://mapstore.readthedocs.io/en/latest/user-guide/home-page/)
 
 ### Python
 > **Note**
