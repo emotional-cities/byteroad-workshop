@@ -14,8 +14,9 @@ This workshop was created by [ByteRoad](https://byteroad.net/), in the context o
 An SDI is a set of tools and methodologies for storing and facilitating the use of geospatial data. The SDI of eMOTIONAL Cities favours using open source tools and open standards for data and service formats.
 
 When we talk about standards, it's helpful to distinguish between two different categories:
-Data: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
-Services: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
+
+* **Data**: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
+* **Services**: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
 
 For *geospatial data*, the most popular formats are:
 
@@ -106,11 +107,11 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 
 Mapstore is a component of our SDI and offers some interesting [Web mapping](https://en.wikipedia.org/wiki/Web_mapping) capabilities for the legacy stack. In fact, it is possible to use Mapstore to view the data stored in GeoServer.
 
-To access Mapstore you can go [here](https://emotional.byteroad.net/mapstore/#/) and log in with credentials
+To access Mapstore you can go [here](https://emotional.byteroad.net/mapstore/#/) and log in with credentials:
 
-> **Workshop Credentials**
-> User: *workshop*
-> Password: *WSTartu22!*
+**User**: *workshop*
+
+**Password**: *WSTartu22!*
 
 ![Mapstore Login](img/mapstore1.png)
 
@@ -134,7 +135,7 @@ And add them to the map
 
 ![Mapstore Map with layers](img/mapstore6.png)
 
-We can add many layer as we need. There are [many options](https://mapstore.readthedocs.io/en/latest/user-guide/layer-settings/) to play with.
+We can add more layers to a single map. There are [many options](https://mapstore.readthedocs.io/en/latest/user-guide/layer-settings/) to play with.
 
 To persist our map we can save it from the top right menu
 
