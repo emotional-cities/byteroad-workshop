@@ -1,4 +1,5 @@
 ![logo](BR_Black.jpg)
+
 # WORKSHOP - Sharing data with the eMOTIONAL Cities SDI :open_hands:
 This workshop introduces the tools that compose the
 eMOTIONAL Cities GIS infrastructure. We will see how to share and
@@ -10,30 +11,64 @@ Please read the [FAQ](#faq) section for more information.
 This workshop was created by [ByteRoad](https://byteroad.net/), in the context of the [eMOTIONAL Cities](https://emotionalcities-h2020.eu/) project.
 
 ## Architecture and Technology Stack :desktop_computer:
-The SDI uses an hybrid architecture, with a mix of [legacy](#the-legacy-stack) and [newer](#the-modern-stack) OGC standards. On one hand we will leverage the OGC API family of standards, which are web native and present a number of advantages for modern web applications. On the other hand, we aknoweledge the fact that a certain degree of compatibility with legacy OGC Web Services (OWS) may be required for some use cases, and will publish data also using those standards.
+An SDI is a set of tools and methodologies for storing and facilitating the use of geospatial data. The SDI of eMOTIONAL Cities favours using open source tools and open standards for data and service formats.
+
+When we talk about standards, it's helpful to distinguish between two different categories:
+
+* **Data formats**: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
+* **Service standards**: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
+
+For *geospatial data*, the most popular formats are:
+
+* Geographic database
+* Vector files
+* Raster files
+
+The most widely used open standards for *services* are those defined by the Open Geospatial Consortium (OGC).
+The most commonly used standards to date are those of OGC Web Services (OWS).
+Still, in recent years new standards have emerged that are more adherent to modern technological trends, oriented to the web and ease of use, known under the name of OGC OpenAPI.
+Our SDI uses a hybrid architecture with a mix of OWS standards, which we will call ["Legacy Stack"](#the-legacy-stack) and the latest OGC OpenAPI OGC, the ["Modern Stack"](#the-modern-stack).
+The idea is to create an SDI that is easy to use, aligned with emerging technological trends, and compatible with most existing tools.
+
+> **Note**
+> It is possible to use the Legacy or Modern stack services... or both, as long as it suits users who have to consume your data. However, from a harmonization point of view, the ideal would be to have uniformity between the different datasets.
+
+### Data formats
+
+From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data format is the first aspect we need to consider. Geospatial data is significantly associated with a location on the Earth's surface. An example:
+
+| Temperature | Humidity  | Time                | Geometry                                  |
+|-------------|-----------|---------------------|-------------------------------------------|
+| 37.5        | 30 %      | 15:30:00 21/07/2022 |POINT (1016908.55777364 4680222.7018746)   |
+| 37          | 35 %      | 15:30:00 21/07/2022 |POINT (1016721.55777364 4680232.7018746)   |
+| 37          | 31.5 %    | 15:35:00 21/07/2022 |POINT (1016908.55777364 4680222.7018746)   |
+| 37          | 34 %      | 15:35:00 21/07/2022 |POINT (1016721.55777364 4680232.7018746)   |
+
+In GIS data, this association must be explicit, and the geographic information must be associated 1:1 with the relevant feature. This is quite straightforward in the data produced with GIS software such as QGIS. For data produced with other softwares this is not always true, and therefore an extra processing step is required before producing the dataset to be ingested into the SDI.
 
 ### The Modern Stack
-These are the standards that we identified as relevant for publishing the eMOTIONAL Cities datasets:
-- OGC API Features - for serving feature data over the web;
-- OGC API Tiles - for serving vector tiles over the web;
-- OGC API Records - for exposing a catalogue of geospatial metadata;
-- OGC API DGGS - for serving data organised according to a Discrete Global Grid System (for instance, indexes);
 
-> **Note**
-> Add hyperlinks to the standards above
+![Modern Stack](img/modern_stack.png)
+
+These are the standards that we identified as relevant for publishing the eMOTIONAL Cities datasets:
+- [OGC API Features](https://www.ogc.org/standards/ogcapi-features) - for serving feature data over the web;
+- [OGC API Tiles](https://ogcapi.ogc.org/tiles/) - (draft) for serving vector tiles over the web;
+- [OGC API Records](https://ogcapi.ogc.org/records/) - (draft) for exposing a catalogue of geospatial metadata;
+- [OGC API DGGS](https://ogcapi.ogc.org/dggs/) - (draft) for serving data organised according to a Discrete Global Grid System (for instance, indexes);
 
 ### The Legacy Stack
-The legacy stack rests on the solid foundation of GeoServer, which allows geospatial datasets to be exposed in the following standards:
-- WFS 1.0.0, 1.1.0, 2.0.0
-- WMS 1.1.1, 1.3.0
-- WMS-C 1.1.1
-- WMTS 1.0.0
 
-> **Note**
-> Add hyperlinks to the standards above
+![Legacy Stack](img/legacy_stack.png)
+
+The legacy stack rests on the solid foundation of GeoServer, which allows geospatial datasets to be exposed in the following standards:
+- [WFS](https://www.ogc.org/standards/wfs) 1.0.0, 1.1.0, 2.0.0
+- [WMS](https://www.ogc.org/standards/wms) 1.1.1, 1.3.0
+- [WMS-C](https://www.ogc.org/standards/wms) 1.1.1
+- [WMTS](https://www.ogc.org/standards/wmts) 1.0.0
+
 
 ## Where is the SDI? :eyes:
-You can access the ```newer``` SDI at this endpoint:
+You can access the ```modern``` services at this endpoint:
 
 https://emotional.byteroad.net/
 
@@ -45,7 +80,11 @@ https://emotional.byteroad.net/collections?f=html
 
 You can click in any collection, to learn about the available services and access the data.
 
-You can access the ```legacy``` SDI at this endpoint:
+An alternative way to browse the catalogue using this client:
+
+https://luoghi-indomiti.github.io/a-gis-full-of-records/
+
+You can access the ```legacy``` services at this endpoint:
 
 https://emotional.byteroad.net/geoserver/
 
@@ -57,17 +96,13 @@ These are the endpoints for the different services:
 - [WFS 2.0.0](https://emotional.byteroad.net/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities)
 
 
-Browse the catalogue using this client:
-
-https://github.com/Luoghi-indomiti/bootstrap-ogc-api-react
-
-> **Note**
-> Enable GitHub pages for this endpoint and replace the link.
-
 ## Connecting to the SDI using a Client :electric_plug:
 Using the endpoints above, you can access data from the SDI using a client, provided that the client supports the standards in the [legacy](#the-legacy-stack) or [newer](#the-modern-stack). In this section of the workshop, we will demonstrate how-to do that, using different clients: QGIS, python/OWSLib, Mapstore and JavaScript/LeafLet. If you are using a different GIS client, you can ask us if it has support for any of these standards.
 
 ### QGIS
+[QGIS](https://www.qgis.org/en/site/) could be considered one of the eMOTIONAL Cities SDI tools, with the only difference that it must be installed locally, on your machine.
+
+QGIS is a desktop software to edit GIS data. It's the main open source solution in the category and is compatible with most of the data formats and standards available, and is continuously updated to support new standards.
 
 QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
 
@@ -95,21 +130,56 @@ Follow these steps to connect to a service and access vector tiles:
 ![](vtiles3.png)
 ![](vtiles4.png)
 
-
 > **Note**
 > OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
 
 ### Mapstore
-> **Note**
-> OGC WFS, WMTS & WMTS.
+
+[Mapstore](https://mapstore.readthedocs.io/en/latest/) is a component of our SDI and offers some interesting [Web mapping](https://en.wikipedia.org/wiki/Web_mapping) capabilities for the legacy stack. In fact, it is possible to use Mapstore to view the data stored in GeoServer.
+
+To access Mapstore you can go [here](https://emotional.byteroad.net/mapstore/#/) and log in with credentials:
+
+**User**: *workshop*
+
+**Password**: *WSTartu22!*
+
+![Mapstore Login](img/mapstore1.png)
+
+To create a new map, click on this button:
+
+![Mapstore New Map](img/mapstore2.png)
+
+The new map will be empty, so we need to configure our Geoserver WMS enpoint to pick some layers to load (or WFS and WMTS if you prefer).
+
+![Mapstore Menu](img/mapstore3.png)
+
+The eMOTIONAL Cities Geoserver WMS endpoint is *https://emotional.byteroad.net/geoserver/wms*
+
+![Mapstore Catalog Configuration](img/mapstore4.png)
+
+After save we will be able to load our layers
+
+![Mapstore Catalog Layers](img/mapstore5.png)
+
+And add them to the map
+
+![Mapstore Map with layers](img/mapstore6.png)
+
+We can add more layers to a single map. There are [many options](https://mapstore.readthedocs.io/en/latest/user-guide/layer-settings/) to play with.
+
+To persist our map we can save it from the top right menu
+
+![Mapstore Menu](img/mapstore3.png)
+
+Then we can choose the name and description of the map and who has access to it
+
+![Mapstore Menu](img/mapstore7.png)
+
+The official documentation of Mapstore is available [here](https://mapstore.readthedocs.io/en/latest/user-guide/home-page/)
 
 ### Python
 > **Note**
 > OGC API Features, OGC API Records, OGC WFS, WMTS & WMTS.
-
-### JavaScript
-> **Note**
-> OGC API Features, OGC API Vector Tiles
 
 ## Authoring Metadata :open_book:
 > **Warning**
