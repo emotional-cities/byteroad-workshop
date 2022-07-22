@@ -1,4 +1,7 @@
 ./jupyter/jupyter_notebook
 ./jupyter/commands.txt
 .ipynb_checkpoints/
+masked.gpkg*
+masked.geojson
+masked.qmd
 

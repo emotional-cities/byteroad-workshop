@@ -201,7 +201,10 @@ https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
 
 ## Ingesting Data into the SDI :rocket:
 
-Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON```, ```GeoPackage``` or ```Shapefile``` formats.
+Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON```, ```GeoPackage``` or ```Shapefile``` formats. 
+
+> **Warning**
+> Your data is not in a geo format? No problem. Read [this](./tabular.md) guide to transform tabular data into one of the supported formats.
 
 We are going to ingest the dataset into the SDI, and you can access it using one of the clients you saw in the previous section.
 

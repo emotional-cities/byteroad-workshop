@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+  <OGRVRTLayer name="masked">
+    <SrcDataSource>masked.csv</SrcDataSource>
+    <GeometryType>wkbPoint</GeometryType>
+    <LayerSRS>EPSG:4326</LayerSRS>
+    <GeometryField encoding="PointFromColumns" x="X" y="Y"/>
+  </OGRVRTLayer>
+</OGRVRTDataSource>
