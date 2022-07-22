@@ -181,6 +181,10 @@ The official documentation of Mapstore is available [here](https://mapstore.read
 > **Note**
 > OGC API Features, OGC API Records, OGC WFS, WMTS & WMTS.
 
+> **Note**
+> ArcGIS PRO has support to OGC API Features. You can read more about it on [this](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) link.
+
+
 ## Authoring Metadata :open_book:
 > **Warning**
 > Use QGIS & PygeoMeta?
