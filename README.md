@@ -1,4 +1,4 @@
-![logo](BR_Black.jpg)
+![logo](img/BR_Black.jpg)
 
 # WORKSHOP - Sharing data with the eMOTIONAL Cities SDI :open_hands:
 This workshop introduces the tools that compose the
@@ -117,7 +117,7 @@ Follow these steps to connect to a service and access vector tiles:
 
 - Locate the vector tiles service, on the left hand side browser panel. In alternative, you can also go to the top menu and navigate to Layer->Add Layer->Vector Tile Layer.
 
-![](vtiles1.png)
+![](img/vtiles1.png)
 
 - Right-click to bring up the context menu and choose `New Generic connection`.  
 - Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}. 
@@ -126,9 +126,9 @@ Follow these steps to connect to a service and access vector tiles:
 - Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner. 
 - Zoom in to Florence, to see your dataset.
 
-![](vtiles2.png)
-![](vtiles3.png)
-![](vtiles4.png)
+![](img/vtiles2.png)
+![](img/vtiles3.png)
+![](img/vtiles4.png)
 
 > **Note**
 > OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
