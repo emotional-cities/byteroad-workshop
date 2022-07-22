@@ -201,12 +201,9 @@ https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
 
 ## Ingesting Data into the SDI :rocket:
 
-Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON``` format.
+Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON```, ```GeoPackage``` or ```Shapefile``` formats.
 
 We are going to ingest the dataset into the SDI, and you can access it using one of the clients you saw in the previous section.
-
-> **Note**
-> Configure geoserver to [read data from an S3 bucket](https://github.com/emotional-cities/byteroad-workshop/issues/2)
 
 ## FAQ
 
