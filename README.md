@@ -178,11 +178,21 @@ Then we can choose the name and description of the map and who has access to it
 The official documentation of Mapstore is available [here](https://mapstore.readthedocs.io/en/latest/user-guide/home-page/)
 
 ### Python
-> **Note**
-> OGC API Features, OGC API Records, OGC WFS, WMTS & WMTS.
+Python suports some OGC APIs and the legacy stack through [OWSLib](https://geopython.github.io/OWSLib/). Run [this](./jupyter/workshop.ipynb) notebook, to exlore the OGC API - Features, OGC API - Records and WMS endpoints of the eMOTIONAL Cities SDI, using python.
 
-> **Note**
-> ArcGIS PRO has support to OGC API Features. You can read more about it on [this](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) link.
+![](jupyter/tweets.jpg)
+
+## Other Clients
+
+ArcGIS PRO has support to OGC API Features. You can read more about it on [this](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) link.
+
+Both [OpenLayers](https://openlayers.org/) and [LeafLet](https://leafletjs.com/) have support to some of the standards on the eMOTIONAL Cities SDI.
+
+https://leafletjs.com/examples/wms/wms.html
+
+https://openlayers.org/en/latest/examples/wms-tiled.html
+
+https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
 
 
 ## Authoring Metadata :open_book:
