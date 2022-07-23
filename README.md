@@ -104,6 +104,8 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 
 QGIS is a desktop software to edit GIS data. It's the main open source solution in the category and is compatible with most of the data formats and standards available, and is continuously updated to support new standards.
 
+#### Adding a Vector Tiles Layer to QGIS
+
 QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
 
 Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
@@ -119,19 +121,47 @@ Follow these steps to connect to a service and access vector tiles:
 
 ![](img/vtiles1.png)
 
-- Right-click to bring up the context menu and choose `New Generic connection`.  
-- Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}. 
+- Right-click to bring up the context menu and choose `New Generic connection`.
+- Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}.
 - Press `Ok` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, bellow "Vector Tiles".
-- Double-click in the collection to add it to the map. 
-- Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner. 
-- Zoom in to Florence, to see your dataset.
+- Double-click in the collection to add it to the map.
+- Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner.
+- Zoom in to Lisbon, to see your dataset.
 
 ![](img/vtiles2.png)
 ![](img/vtiles3.png)
 ![](img/vtiles4.png)
 
+#### Adding Vector Data to QGIS
+
+With QGIS it's possible to navigate a manipulate [Vector Data](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector/index.html).
+
+We will add to our map a layer from GeoServer, using WFS, and a Feature collection from pygeoapi.
+
+- To add a layer from GeoServer, we must first configure the WFS endpoint:
+
+![](img/wfs1.png)
+
+- The address of our WFS enpoint is https://emotional.byteroad.net/geoserver/wfs
+
+![](img/wfs2.png)
+
+- Change the version in WFS Options to 2.0 (you can use Detect button as well)
+- From the browser now we can list layers available anche add select the one we want to add to our map (*Observations*)
+
+![](img/wfs3.png)
+
+- Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner.
+- Zoom in to Lisbon, to see your dataset.
+
+![](img/wfs4.png)
+
 > **Note**
-> OGC API Features, OGC API Vector Tiles, OGC API Records, OGC WFS, WMTS & WMTS.
+> The WFS of our GeoServer is not configured with Transaction support, so it is not possible to modify the data directly via WFS.
+
+- You can load the same layer also via OGC API Features, in the cofiguration of the WFS endpoint just replace WFS url with OGC API endpoint: https://emotional.byteroad.net/ and the version to OGC API Features:
+
+![](img/features1.png)
 
 ### Mapstore
 
@@ -201,7 +231,7 @@ https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
 
 ## Ingesting Data into the SDI :rocket:
 
-Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON```, ```GeoPackage``` or ```Shapefile``` formats. 
+Upload your own dataset, using [these](https://github.com/emotional-cities/data-share) instructions. We recommend that you use the ```GeoJSON```, ```GeoPackage``` or ```Shapefile``` formats.
 
 We are going to ingest the dataset into the SDI, and you can access it using one of the clients you saw in the previous section.
 
