@@ -104,7 +104,7 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 
 QGIS is a desktop software to edit GIS data. It's the main open source solution in the category and is compatible with most of the data formats and standards available, and is continuously updated to support new standards.
 
-#### Adding a Vector Tiles Layer to QGIS
+#### Adding a Vector Tiles Layer to QGIS :city_sunset:
 
 QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
 
@@ -132,7 +132,7 @@ Follow these steps to connect to a service and access vector tiles:
 ![](img/vtiles3.png)
 ![](img/vtiles4.png)
 
-#### Adding Vector Data to QGIS
+#### Adding Vector Data to QGIS :round_pushpin:
 
 With QGIS it's possible to work with [Vector Data](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector/index.html).
 
@@ -163,7 +163,7 @@ In our SDI we have different services to serve vector data: WFS, WMS and OGC API
 
 ![](img/features1.png)
 
-#### Checking OGC API Records with Metasearch tool in QGIS
+#### Checking OGC API Records with Metasearch tool in QGIS :house:
 
 QGIS integrates a simple tool to check Metadata catalogs, [Metasearch](https://docs.qgis.org/3.22/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html)
 
