@@ -134,9 +134,9 @@ Follow these steps to connect to a service and access vector tiles:
 
 #### Adding Vector Data to QGIS
 
-With QGIS it's possible to navigate a manipulate [Vector Data](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector/index.html).
+With QGIS it's possible to work with [Vector Data](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector/index.html).
 
-We will add to our map a layer from GeoServer, using WFS, and a Feature collection from pygeoapi.
+In our SDI we have different services to serve vector data: WFS, WMS and OGC API Features.
 
 - To add a layer from GeoServer, we must first configure the WFS endpoint:
 
@@ -162,6 +162,31 @@ We will add to our map a layer from GeoServer, using WFS, and a Feature collecti
 - You can load the same layer also via OGC API Features, in the cofiguration of the WFS endpoint just replace WFS url with OGC API endpoint: https://emotional.byteroad.net/ and the version to OGC API Features:
 
 ![](img/features1.png)
+
+#### Checking OGC API Records with Metasearch tool in QGIS
+
+QGIS integrates a simple tool to check Metadata catalogs, [Metasearch](https://docs.qgis.org/3.22/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html)
+
+- Metasearch is available in the top menu Web -> Metasearch -> Metasearch
+
+![](img/record1.png)
+
+- To configure eMOTIONAL Cities OGC API Records catalog click on New button in the *Services* tab
+
+![](img/record2.png)
+
+- Then use the following configuration:
+
+Name: *eMOTIONAL Cities catalog*  (or what you prefer!)
+URL: *https://emotional.byteroad.net/collections/ec_catalog*  (ec_catalog is the collection configured for our metadata)
+Catalog type: *OGC API Records*
+
+![](img/record3.png)
+
+- Click **OK** button to save
+- From *Search* tab now is possible to select our catalog to load metadata
+
+![](img/record4.png)
 
 ### Mapstore
 
