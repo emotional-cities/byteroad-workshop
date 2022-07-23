@@ -33,9 +33,9 @@ The idea is to create an SDI that is easy to use, aligned with emerging technolo
 > **Note**
 > It is possible to use the Legacy or Modern stack services... or both, as long as it suits users who have to consume your data. However, from a harmonization point of view, the ideal would be to have uniformity between the different datasets.
 
-### Data formats
+### Data formats :construction_worker:
 
-From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data format is the first aspect we need to consider. Geospatial data is significantly associated with a location on the Earth's surface. An example:
+From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data format is the first aspect we need to consider. Geospatial data is significantly associated with a location on the Earth's surface. A simple example:
 
 | Temperature | Humidity  | Time                | Geometry                                  |
 |-------------|-----------|---------------------|-------------------------------------------|
@@ -46,7 +46,9 @@ From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data
 
 In GIS data, this association must be explicit, and the geographic information must be associated 1:1 with the relevant feature. This is quite straightforward in the data produced with GIS software such as QGIS. For data produced with other softwares this is not always true, and therefore an extra processing step is required before producing the dataset to be ingested into the SDI.
 
-### The Modern Stack
+[Here](./data_formats.md) you can find more informations about supported data formats.
+
+### The Modern Stack :sparkles:
 
 ![Modern Stack](img/modern_stack.png)
 
@@ -56,7 +58,7 @@ These are the standards that we identified as relevant for publishing the eMOTIO
 - [OGC API Records](https://ogcapi.ogc.org/records/) - (draft) for exposing a catalogue of geospatial metadata;
 - [OGC API DGGS](https://ogcapi.ogc.org/dggs/) - (draft) for serving data organised according to a Discrete Global Grid System (for instance, indexes);
 
-### The Legacy Stack
+### The Legacy Stack :guardsman:
 
 ![Legacy Stack](img/legacy_stack.png)
 
@@ -264,7 +266,7 @@ We are going to ingest the dataset into the SDI, and you can access it using one
 
 ### :scream:
 > **Warning**
-> Your data is not in a geo format? No problem. Read [this](./tabular.md) guide to transform tabular data into one of the supported formats.
+> Your data is not in a [geo format](https://github.com/emotional-cities/byteroad-workshop#data-formats)? No problem. Read [this](./tabular.md) guide to transform tabular data into one of the supported formats.
 
 ## FAQ
 
