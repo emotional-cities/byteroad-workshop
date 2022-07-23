@@ -171,7 +171,7 @@ QGIS integrates a simple tool to check Metadata catalogs, [Metasearch](https://d
 
 ![](img/record1.png)
 
-- To configure eMOTIONAL Cities OGC API Records catalog click on New button in the *Services* tab
+- To configure eMOTIONAL Cities OGC API Records catalog click on **New..** button in the *Services* tab
 
 ![](img/record2.png)
 
