@@ -255,8 +255,11 @@ https://openlayers.org/en/latest/examples/ogc-vector-tiles.html
 
 
 ## Authoring Metadata :open_book:
-> **Warning**
-> Use QGIS & PygeoMeta?
+
+The single access point for eMOTIONAL Cities SDI metadata is an OGC API Records.
+
+Metadata goes 1:1 with the datasets with which we will populate our infrastructure. Therefore this information must be made available contextually with the datasets. To facilitate this step, we have prepared a form to collect the primary data to fill a metadata record.
+The form is available at [this address](https://docs.google.com/forms/d/e/1FAIpQLScnqcDkmJrsSwgvQdoVkNPdlAnDmaw7-Pt9x0ziGwY9Is_2Zg/viewform?usp=sf_link).
 
 ## Ingesting Data into the SDI :rocket:
 
