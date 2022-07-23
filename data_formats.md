@@ -18,3 +18,6 @@ It's not an open format (ESRI regulates it), but many open source tools like QGI
 
 It's the most convenient output to produce with many software (Excel & similar, Database exports, custom software etc.). It's ok to use it, but you have to take care of spatial coordinates yourself (format, projection etc.).
 If you adopt the CSV format, we can upload the file to the PostGIS database in eMOTIONAL Cities SDI, making it available on GeoServer and with some extra conversion on OGC API Features.
+
+> **Warning**
+> Your data is not in a [geo format](https://github.com/emotional-cities/byteroad-workshop#data-formats)? No problem. Read [this](./tabular.md) guide to transform tabular data into one of the supported formats.
