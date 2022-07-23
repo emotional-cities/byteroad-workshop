@@ -177,9 +177,11 @@ QGIS integrates a simple tool to check Metadata catalogs, [Metasearch](https://d
 
 - Then use the following configuration:
 
-Name: *eMOTIONAL Cities catalog*  (or what you prefer!) \
-URL: *https://emotional.byteroad.net/collections/ec_catalog*  (ec_catalog is the collection configured for our metadata) \
-Catalog type: *OGC API Records* \
+**Name:** *eMOTIONAL Cities catalog* \
+**URL:** *https://emotional.byteroad.net/collections/ec_catalog* \
+**Catalog type:** *OGC API Records*
+
+- ec_catalog is the collection configured with our catalog
 
 ![](img/record3.png)
 
