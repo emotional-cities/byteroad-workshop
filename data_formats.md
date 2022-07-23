@@ -16,5 +16,5 @@ It's not an open format (ESRI regulates it), but many open source tools like QGI
 
 ## CSV :floppy_disk:
 
-It's the text-based approach, and it's the most convenient output to produce with many software (Excel & similar, Database exports, custom software). It's ok to use, but you have to take care of spatial coordinates yourself (format, projection etc.).
+It's the most convenient output to produce with many software (Excel & similar, Database exports, custom software etc.). It's ok to use, but you have to take care of spatial coordinates yourself (format, projection etc.).
 If you adopt the CSV format, we can upload the file to the PostGIS database in eMOTIONAL Cities SDI, making it available on GeoServer and with some extra conversion on OGC API Features.
