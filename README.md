@@ -13,25 +13,10 @@ This workshop was created by [ByteRoad](https://byteroad.net/), in the context o
 ## Architecture and Technology Stack :desktop_computer:
 An SDI is a set of tools and methodologies for storing and facilitating the use of geospatial data. The SDI of eMOTIONAL Cities favours using open source tools and open standards for data and service formats.
 
-When we talk about standards, it's helpful to distinguish between two different categories:
+In GIS infrastructures, the need for standardization concerns to:
 
 * **Data formats**: the formats by which data is stored in a computer: they can indicate a file with a particular format or a database.
 * **Service standards**: the standards by which data is shared and made accessible (which is not the same as giving access to raw data).
-
-For *geospatial data*, the most popular formats are:
-
-* Geographic database
-* Vector files
-* Raster files
-
-The most widely used open standards for *services* are those defined by the Open Geospatial Consortium (OGC).
-The most commonly used standards to date are those of OGC Web Services (OWS).
-Still, in recent years new standards have emerged that are more adherent to modern technological trends, oriented to the web and ease of use, known under the name of OGC OpenAPI.
-Our SDI uses a hybrid architecture with a mix of OWS standards, which we will call ["Legacy Stack"](#the-legacy-stack) and the latest OGC OpenAPI OGC, the ["Modern Stack"](#the-modern-stack).
-The idea is to create an SDI that is easy to use, aligned with emerging technological trends, and compatible with most existing tools.
-
-> **Note**
-> It is possible to use the Legacy or Modern stack services... or both, as long as it suits users who have to consume your data. However, from a harmonization point of view, the ideal would be to have uniformity between the different datasets.
 
 ### Data formats :construction_worker:
 
@@ -46,7 +31,24 @@ From the perspective of the data lifecycle in the eMOTIONAL Cities SDI, the data
 
 In GIS data, this association must be explicit, and the geographic information must be associated 1:1 with the relevant feature. This is quite straightforward in the data produced with GIS software such as QGIS. For data produced with other softwares this is not always true, and therefore an extra processing step is required before producing the dataset to be ingested into the SDI.
 
+There are three main types of *geospatial data*:
+
+* Geographic database
+* Vector files
+* Raster files
+
 [Here](./data_formats.md) you can find more informations about supported data formats.
+
+### Services
+
+The most widely used open standards for sharing spatial data are those defined by the Open Geospatial Consortium (OGC).
+In the last 20 years, the most commonly used standards have been OGC Web Services (OWS).
+Still, in recent years new standards have emerged that are more adherent to modern technological trends, oriented to the web and ease of use, known under the name of OGC OpenAPI.
+Our SDI uses a hybrid architecture with a mix of OWS standards, which we will call ["Legacy Stack"](#the-legacy-stack) and the latest OGC OpenAPI OGC, the ["Modern Stack"](#the-modern-stack).
+The idea is to create an SDI that is easy to use, aligned with emerging technological trends, and compatible with most existing tools.
+
+> **Note**
+> It is possible to use the Legacy or Modern stack services... or both, as long as it suits users who have to consume your data. However, from a harmonization point of view, the ideal would be to have uniformity between the different datasets.
 
 ### The Modern Stack :sparkles:
 
@@ -106,34 +108,6 @@ Using the endpoints above, you can access data from the SDI using a client, prov
 
 QGIS is a desktop software to edit GIS data. It's the main open source solution in the category and is compatible with most of the data formats and standards available, and is continuously updated to support new standards.
 
-#### Adding a Vector Tiles Layer to QGIS :city_sunset:
-
-QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
-
-Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
-
-- Access the collection page of the tiles dataset: https://emotional.byteroad.net/collections/masked
-- From there, navigate to the tiles page by clicking on `tiles`: https://emotional.byteroad.net/collections/masked/tiles
-- Click in `Tiles metadata in tilejson format`: https://emotional.byteroad.net/collections/masked/tiles/WorldCRS84Quad/metadata
-- Take note of the url in `tiles`: `https://emotional.byteroad.net/collections/masked/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom.
-
-Follow these steps to connect to a service and access vector tiles:
-
-- Locate the vector tiles service, on the left hand side browser panel. In alternative, you can also go to the top menu and navigate to Layer->Add Layer->Vector Tile Layer.
-
-![](img/vtiles1.png)
-
-- Right-click to bring up the context menu and choose `New Generic connection`.
-- Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}.
-- Press `Ok` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, bellow "Vector Tiles".
-- Double-click in the collection to add it to the map.
-- Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner.
-- Zoom in to Lisbon, to see your dataset.
-
-![](img/vtiles2.png)
-![](img/vtiles3.png)
-![](img/vtiles4.png)
-
 #### Adding Vector Data to QGIS :round_pushpin:
 
 With QGIS it's possible to work with [Vector Data](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector/index.html).
@@ -164,6 +138,35 @@ In our SDI we have different services to serve vector data: WFS, WMS and OGC API
 - You can load the same layer also via OGC API Features, in the cofiguration of the WFS endpoint just replace WFS url with OGC API endpoint: https://emotional.byteroad.net/ and the version to OGC API Features:
 
 ![](img/features1.png)
+
+
+#### Adding a Vector Tiles Layer to QGIS :city_sunset:
+
+QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
+
+Before entering QGIS, access your pygeoapi installation page on the browser and follow these steps.
+
+- Access the collection page of the tiles dataset: https://emotional.byteroad.net/collections/masked
+- From there, navigate to the tiles page by clicking on `tiles`: https://emotional.byteroad.net/collections/masked/tiles
+- Click in `Tiles metadata in tilejson format`: https://emotional.byteroad.net/collections/masked/tiles/WorldCRS84Quad/metadata
+- Take note of the url in `tiles`: `https://emotional.byteroad.net/collections/masked/tiles/WorldCRS84Quad/{tileMatrix}/{tileRow}/{tileCol}?f=mvt` and of the values of minZoom and maxZoom.
+
+Follow these steps to connect to a service and access vector tiles:
+
+- Locate the vector tiles service, on the left hand side browser panel. In alternative, you can also go to the top menu and navigate to Layer->Add Layer->Vector Tile Layer.
+
+![](img/vtiles1.png)
+
+- Right-click to bring up the context menu and choose `New Generic connection`.
+- Fill the required values. For URL, use the one you noted from the previous step, replacing the`{tileMatrix}/{tileRow}/{tileCol}` by {x}/{x}/{y}.
+- Press `Ok` to add the service. At this point, if you are using the browser you should see the collection appearing in the menu, bellow "Vector Tiles".
+- Double-click in the collection to add it to the map.
+- Don't forget to set the CRS of the map to `EPSG:4326`, by clicking in the button on the lower right corner.
+- Zoom in to Lisbon, to see your dataset.
+
+![](img/vtiles2.png)
+![](img/vtiles3.png)
+![](img/vtiles4.png)
 
 #### Checking OGC API Records with Metasearch tool in QGIS :house:
 
