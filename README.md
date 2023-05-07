@@ -139,7 +139,6 @@ In our SDI we have different services to serve vector data: WFS, WMS and OGC API
 
 ![](img/features1.png)
 
-
 #### Adding a Vector Tiles Layer to QGIS :city_sunset:
 
 QGIS supports OGC API Vector Tiles via the [Vector Tiles Layer](https://docs.qgis.org/3.22/en/docs/user_manual/working_with_vector_tiles/vector_tiles_properties.html). Although OGC API Tiles are not natively supported, you can customize the `generic connection` in order to access them in QGIS.
@@ -239,14 +238,35 @@ Then we can choose the name and description of the map and who has access to it
 
 The official documentation of Mapstore is available [here](https://mapstore.readthedocs.io/en/latest/user-guide/home-page/)
 
+#### Adding Vector Data to ArcGIS PRO :round_pushpin:
+
+ArcGIS PRO has [support to OGC API Features](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm), in addition to
+WFS, and WMS.
+
+1. To add an OGC API layer, you need to access the top-level "Insert" menu, and click on the "connections" icon to add a server connection. In the type of connection, you can select "New OGC API Server".
+
+![](img/arcgis1.png)
+
+2. The url of the OGC API endpoint is: https://emotional.byteroad.net/ 
+
+![](img/arcgis2.png)
+
+3. This will add a new entry on the project catalog panel, which lists all the available layers. You can click on any of the layers, to add it to the map.
+
+![](img/arcgis3.png)
+
+* If you want to add a WFS layer or WMS layer, you must repeat step 1, but instead of "New OGC API Server", select "New WFS Server" or "New WMS Server.
+
+* The address of the WFS enpoint is https://emotional.byteroad.net/geoserver/wfs
+
+* The address of the WMS enpoint is https://emotional.byteroad.net/geoserver/wms
+
 ### Python
 Python suports some OGC APIs and the legacy stack through [OWSLib](https://geopython.github.io/OWSLib/). Run [this](./jupyter/workshop.ipynb) notebook, to exlore the OGC API - Features, OGC API - Records and WMS endpoints of the eMOTIONAL Cities SDI, using python.
 
 ![](jupyter/tweets.jpg)
 
 ## Other Clients
-
-ArcGIS PRO has support to OGC API Features. You can read more about it on [this](https://pro.arcgis.com/en/pro-app/2.8/help/data/services/use-ogc-api-services.htm) link.
 
 Both [OpenLayers](https://openlayers.org/) and [LeafLet](https://leafletjs.com/) have support to some of the standards on the eMOTIONAL Cities SDI.
 
