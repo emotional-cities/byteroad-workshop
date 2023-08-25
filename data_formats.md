@@ -22,9 +22,14 @@ If you adopt the CSV format, we can upload the file to the PostGIS database in e
 ## General recommendations 🧑‍🏫
 In the nomenclature that you give to your datasets, there are a couple of general naming conventions that it would be better to follow if you want your datasets to be correctly usable through the various services of the SDI. Write the names (filenames, variables, attributes, column headers etc.) to be:
 
-1. [Camel case](https://en.wikipedia.org/wiki/Camel_case)
+1. [lower camel case](https://en.wikipedia.org/wiki/Camel_case)
 2. [Alphanumeric](https://en.wikipedia.org/wiki/Alphanumericals) (therefore, they cannot contain spaces)
 3. They cannot have a number as the first character
+4. If you want your data to be exportable as a shapefile, make sure the names are at most 10 characters long (or at least that by truncating them after 10 characters they are still understandable!)
+
+Ideal names are: myVariable, a001VariableVeryLong, theVar002
+Acceptable names are: my_variable_name, a_001_variable, the_variable_002
+Bad names are: my.Variable, my-Variable, Variable_Very_Very_Loooooooong_001, 123Variable 
 
 > **Warning**
 > Your data is not in a [geo format](https://github.com/emotional-cities/byteroad-workshop#data-formats)? No problem. Read [this](./tabular.md) guide to transform tabular data into one of the supported formats.
