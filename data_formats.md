@@ -20,12 +20,24 @@ It's the most convenient output to produce with many software (Excel & similar, 
 If you adopt the CSV format, we can upload the file to the PostGIS database in eMOTIONAL Cities SDI, making it available on GeoServer and with some extra conversion on OGC API Features.
 
 ## General recommendations 🧑‍🏫
-In the nomenclature that you give to your datasets, there are a couple of general naming conventions that it would be better to follow if you want your datasets to be correctly usable through the various services of the SDI. Write the names (filenames, variables, attributes, column headers etc.) to be:
+In the nomenclature that you give to your datasets, there are a couple of general naming conventions to follow, in order for the datasets to be correctly usable through the various services of the SDI. 
+
+Rules for file names:
+1. All letters must be lowercase.
+2. They cannot begin with _ (underscore) or - (hyphen).
+3. They cannot contain spaces, commas, or the following characters: ```:, ", *, +, /, \, |, ?, #, >, or <```
+
+- Ideal names are: london_pop_23, exp0823
+- Acceptable names are: myexperiment_in_london, lisbon-walk-001
+- Bad names are: my.File, _myexperiment0823, londonWalk
+   
+Rules for field names (e.g.: attributes, properties, column headers etc.):
 
 1. [lower camel case](https://en.wikipedia.org/wiki/Camel_case)
 2. [Alphanumeric](https://en.wikipedia.org/wiki/Alphanumericals) (therefore, they cannot contain spaces)
 3. They cannot have a number as the first character
-4. If you want your data to be exportable as a shapefile, make sure the names are at most 10 characters long (or at least that by truncating them after 10 characters they are still understandable!)
+4. They cannot contain any dots, e.g.: ```.```
+5. If you want your data to be exportable as a shapefile, make sure the names are at most 10 characters long (or at least that by truncating them after 10 characters they are still understandable!)
 
 - Ideal names are: _myVariable, a001VariableVeryLong, theVar002_
 - Acceptable names are: _my_variable_name, a_001_variable, the_variable_002_
