@@ -19,7 +19,7 @@ It's not an open format (ESRI regulates it), but many open source tools like QGI
 It's the most convenient output to produce with many software (Excel & similar, Database exports, custom software etc.). It's ok to use it, but you have to take care of spatial coordinates yourself (format, projection etc.).
 If you adopt the CSV format, we can upload the file to the PostGIS database in eMOTIONAL Cities SDI, making it available on GeoServer and with some extra conversion on OGC API Features.
 
-Whichever format you choose, please create an additional colum with a unique identifier for your records. The ID could be an incrementing integer, or an alphanumeric string, as long each row as an unique ID value. You can read more about unique identifiers [here](https://veeevek.medium.com/possible-ways-to-generate-unique-ids-for-your-application-bfdcf4e6bef4)
+  **Whichever format you choose, please make sure you have a colum with a unique identifier for your records. The ID could be an incrementing integer, or an alphanumeric string, as long each row as an unique ID value. You can read more about unique identifiers [here](https://veeevek.medium.com/possible-ways-to-generate-unique-ids-for-your-application-bfdcf4e6bef4)**
 
 
 ## General Guidelines 🧑‍🏫
